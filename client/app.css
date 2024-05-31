@@ -1,0 +1,407 @@
+:host {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+  }
+  
+  ul {
+    padding-left: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  #header {
+    background-color: #333;
+    display: flex;
+    height: 20px;
+    gap: 30px;
+    padding: 12px 15px;
+  }
+  
+  #header .title {
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  
+  #header .title strong {
+    font-weight: 600;
+  }
+
+  #header .icons {
+    margin-left: auto;
+  }
+
+  #header .icon {
+    border-radius: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+  #filters-panel {
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #eee;
+    height: 150px;
+    padding: 15px;
+  }
+  
+  #main {
+    display: flex;
+    height: calc(100vh - 226px);
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: 200;
+    margin: 7px 0;
+  }
+  
+  #clusters-panel {
+    min-width: 510px;
+    overflow-y: scroll;
+    padding: 15px;
+    width: calc(100vw - 820px);
+  }
+  
+  #sessions-panel {
+    overflow-y: scroll;
+    padding: 15px;
+    width: 440px;
+  }
+  
+  #details-panel {
+    padding: 15px 5px 15px 15px;
+    overflow-y: scroll;
+    width: 320px;
+  }
+  
+  .clusters ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cluster {
+    margin: 10px 25px 15px 0;
+  }
+  
+  .cluster .cluster-title {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .cluster .terms {
+    color: #777;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 170px;
+  }
+  
+  .cluster .images {
+    display: flex;
+    flex-wrap: wrap;
+    height: 84px;
+    margin-top: 2px;
+    overflow-y: hidden;
+    width: 170px;
+  }
+  
+  .cluster .images img {
+    cursor: pointer;
+    filter: blur(1px);
+    height: 40px;
+    margin-bottom: 1px;
+    margin-right: 2px;
+    width: 40px;
+  }
+  
+  .cluster .images .hidden img {
+    height: 40px;
+    margin-right: 1px;
+    object-fit: cover;
+    object-position: 48% 52%;
+    opacity: 0.3;
+    width: 1px;
+  }
+
+  .cluster .images .image-with-dominant-color {
+    background-color: #aaa;
+    cursor: pointer;
+    height: 40px;
+    margin-bottom: 1px;
+    margin-right: 2px;
+    opacity: 0.7;
+    width: 40px;
+  }
+
+  .cluster .images .hidden .image-with-dominant-color {
+    width: 1px;
+  }
+  
+  .cluster .more {
+    color: #999;
+    cursor: pointer;
+    font-size: 9px;
+  }
+  
+  .submission {
+    border-bottom: 5px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 40px;
+    overflow-x: clip;
+    width: 100%;
+  }
+  
+  .submission ul {
+    display: flex;
+    margin: 2px 0;
+  }
+  
+  .submission li {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 1px 4px 1px 0;
+    padding: 1px 2px;
+  }
+  
+  .prompt-text {
+    font-family: monospace;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .field-block {
+    margin: 5px 3px 5px 0;
+  }
+  
+  .field-block.inline {
+    align-items: center;
+    display: flex;
+    height: 16px;
+  }
+  
+  .field-title {
+    color: #aaa;
+    font-size: 12px;
+    padding: 0 2px 0 0;
+  }
+  
+  .image {
+    /* filter: blur(2px); */
+    height: 150px;
+  }
+
+  .image-with-dominant-color {
+    background-color: #aaa;
+    height: 100px;
+    margin-bottom: 1px;
+    margin-right: 2px;
+    opacity: 0.7;
+    width: 100px;
+  }
+  
+  .similar-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 210px;
+  }
+  
+  .image-similar {
+    cursor: pointer;
+    /* filter: blur(1px); */
+    height: 40px;
+    margin-right: 2px;
+  }
+
+  .image-similar-with-dominant-color {
+    cursor: pointer;
+    height: 40px;
+    margin-bottom: 1px;
+    margin-right: 2px;
+    width: 40px;
+  }
+  
+  .dimensions {
+    display: flex;
+  }
+  
+  .dimension {
+    margin: 0 25px 0 0;
+    width: 200px;
+  }
+  
+  .dimension.narrow {
+    width: 160px;
+  }
+  
+  .filter-title {
+    color: #999;
+    font-size: 14px;
+    padding: 3px 0;
+  }
+  
+  .dimension table {
+    width: 100%;
+  }
+  
+  .table-container {
+    max-height: 140px;
+    overflow-y: scroll;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table td {
+    border-top: 1px solid #eee;
+    padding: 5px;
+    word-break: break-word;
+  }
+  
+  .table-container td {
+    cursor: pointer;
+  }
+  
+  .table-container tr:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .table-container tr.selected td {
+    background-color: #eee;
+    font-weight: 600;
+  }
+  
+  .table-container td.count {
+    text-align: right;
+    white-space: nowrap;
+    width: 25%;
+  }
+  
+  #sessions {
+    margin-top: 20px;
+  }
+  
+  #sessions th {
+    color: #999;
+    font-weight: normal;
+    padding: 5px 2px;
+  }
+  
+  #sessions .count {
+    text-align: right;
+    width: 15px;
+  }
+  
+  #sessions .submitter {
+    width: 30px;
+  }
+  
+  #sessions .prompt {
+    font-size: 14px;
+  }
+  
+  #sessions .datetime {
+    color: #999;
+    font-size: 10px;
+    width: 55px;
+  }
+  
+  #sessions .clickable {
+    cursor: pointer;
+  }
+  
+  .show-more {
+    cursor: pointer;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .filter-chips {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    min-height: 20px;
+    width: 100%;
+  }
+  
+  .filter-chips .first {
+    color: #aaa;
+  }
+  
+  .filter-chip {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #777;
+    margin-right: 3px;
+    padding: 2px 4px;
+    white-space: nowrap;
+  }
+  
+  .filter-chip .remove {
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .prompt-count {
+    margin-bottom: 5px;
+  }
+  
+  .top-ngrams {
+    color: #777;
+    padding: 3px 0 6px;
+  }
+  
+  .search {
+    color: #555;
+    margin: 10px 0;
+    min-height: 20px;
+  }
+  
+  .only-submitted-checkbox {
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  label {
+    align-items: center;
+    display: flex;
+  }
+  
+  .clear-all {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #777;
+    cursor: pointer;
+  }
+  
+  .clear-all:hover {
+    background-color: #eee;
+  }
+
+  .rounds {
+    display: flex;
+    gap: 12px;
+    padding-top: 3px;
+  }
+
+  .round-num a {
+    color: #eee;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .round-num a:hover {
+    text-decoration: underline;
+  }
+
+  .selected-round {
+    font-weight: 600;
+  }
