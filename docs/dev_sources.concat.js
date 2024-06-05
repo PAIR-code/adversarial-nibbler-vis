@@ -5681,7 +5681,7 @@
     }
   };
   var Z2 = t4.litHtmlPolyfillSupport;
-  Z2?.(V2, M2), (t4.litHtmlVersions ??= []).push("3.1.3");
+  Z2?.(V2, M2), (t4.litHtmlVersions ??= []).push("3.1.4");
   var j = (t7, i8, s8) => {
     const e12 = s8?.renderBefore ?? i8;
     let h5 = e12._$litPart$;
@@ -5718,7 +5718,7 @@
   s7._$litElement$ = true, s7["finalized", "finalized"] = true, globalThis.litElementHydrateSupport?.({ LitElement: s7 });
   var r7 = globalThis.litElementPolyfillSupport;
   r7?.({ LitElement: s7 });
-  (globalThis.litElementVersions ??= []).push("4.0.5");
+  (globalThis.litElementVersions ??= []).push("4.0.6");
 
   // node_modules/@adobe/lit-mobx/lit-mobx.js
   var MobxLitElement = class extends MobxReactionUpdate(s7) {
@@ -5952,6 +5952,8 @@
   }
 
   .cluster .images .hidden .image-with-dominant-color {
+    margin-right: 1px;
+    opacity: 0.3;
     width: 1px;
   }
   

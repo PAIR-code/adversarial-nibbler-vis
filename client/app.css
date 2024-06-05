@@ -139,6 +139,8 @@
   }
 
   .cluster .images .hidden .image-with-dominant-color {
+    margin-right: 1px;
+    opacity: 0.3;
     width: 1px;
   }
   
